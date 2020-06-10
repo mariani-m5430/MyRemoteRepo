@@ -16,6 +16,8 @@ public class myAppTester {
 	  System.out.print("Reverse of the input number is:");
 	  reverseMethod(n);
 	  System.out.println();
+	  System.out.print(n + "in binary code is ");
+	  inBinary(n);
 
 	  // add a line below to call your myTestMethod from here  then remove the block comment symbols  
 
@@ -31,17 +33,13 @@ public class myAppTester {
 	           System.out.print(num % 10);
 	           reverseMethod(num/10);     // recursive call
 	       }
-	   }
-
-
-	   /* 
-	       add your test method in this space then remove the block comment symbols
-	       public static void myTestMethod(...){
-
-            
-
-		   }
-	 
-	   */
+	}
+	
+	public static void inBinary(int number) {
+		if (number > 0) {
+			inBinary(number / 2);
+	    	System.out.print(number % 2);
+	    }
+	}
 
 }
